@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 export const SkillStyled = styled.div`
-  padding: 80px 5vw;
+  padding: 70px 5vw;
   display: flex;
   align-items: center;
   justify-content: center;

@@ -1,10 +1,9 @@
 import { FC, Fragment } from 'react'
 import Canvas from './Canvas'
 import { SVG } from './styled/Svg.styled'
-import { IntroStyled, Paragraphs, ScrollBtn } from './styled/Intro.styled'
+import { Icon, IntroStyled, Paragraphs, ScrollBtn } from './styled/Intro.styled'
 import { characters } from '../shared/contants'
 import { m } from 'framer-motion'
-import { BiChevronsDown } from 'react-icons/bi'
 
 const Intro: FC = () => {
   return (
@@ -50,7 +49,7 @@ const Intro: FC = () => {
         animate={{ opacity: 1 }}
         transition={{ duration: 0.4, delay: 1.4 }}
       >
-        <BiChevronsDown style={{ animation: 'bounce 1s infinite' }} size={56} />
+        <Icon size={56} />
       </ScrollBtn>
     </IntroStyled>
   )

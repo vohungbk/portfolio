@@ -27,11 +27,41 @@ pre {
   margin: 0;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+input,
+button {
+  font-family: inherit;
+  font-size: 100%;
+  line-height: inherit;
+  color: inherit;
+  margin: 0;
+  padding: 0;
+}
 a {
   color: inherit;
   text-decoration: inherit;
 }
+img {
+  max-width: 100%;
+  height: auto;
+}
 
 * {
   box-sizing: border-box;
+}
+
+*,
+:after,
+:before {
+  box-sizing: border-box;
+  border: 0 solid #e5e7eb;
 }

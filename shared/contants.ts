@@ -26,28 +26,23 @@ export const canvasImages = [
 export const socialLinks = [
   {
     title: 'Github',
-    icon: '/github.png',
-    link: 'https://github.com/napthedev',
+    icon: '/images/github.png',
+    link: 'https://github.com/vohungbk',
   },
   {
     title: 'Facebook',
-    icon: '/facebook.png',
-    link: 'https://www.facebook.com/napthedev',
+    icon: '/images/facebook.png',
+    link: 'https://www.facebook.com/viethungbk/',
   },
   {
     title: 'Discord',
-    icon: '/discord.png',
-    link: 'https://discord.com/users/877882975855992852',
+    icon: '/images/discord.png',
+    link: 'https://discord.com/users/8473',
   },
   {
-    title: 'Codepen',
-    icon: '/codepen.png',
-    link: 'https://codepen.io/enaypi',
-  },
-  {
-    title: 'My blog',
-    icon: '/blog.png',
-    link: 'https://blog.napthedev.com',
+    title: 'Telegram',
+    icon: '/images/telegram.png',
+    link: 'https://web.telegram.org/k/',
   },
 ]
 
@@ -135,5 +130,21 @@ export const skills = [
       'https://images.weserv.nl/?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2FPKief%2Fvscode-material-icon-theme%40main%2Ficons%2Fwebpack.svg&w=50&h=50',
     link: 'https://webpack.js.org/',
     title: 'webpack',
+  },
+]
+
+export const projects = [
+  {
+    id: 'cl4198jlh4fb10b0yca75wulh',
+    title: 'Huddle',
+    description: 'A landing page with styled component',
+    demo: 'https://vohungbk.github.io/huddle/',
+    github: 'https://github.com/vohungbk/huddle',
+    technologies: [
+      'https://cdn.jsdelivr.net/gh/PKief/vscode-material-icon-theme@main/icons/react.svg',
+    ],
+    image: {
+      url: 'https://i.ibb.co/h11Jth5/React-App.png',
+    },
   },
 ]

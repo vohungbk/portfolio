@@ -1,5 +1,12 @@
-import styled from 'styled-components'
+import styled, { keyframes } from 'styled-components'
 import { m } from 'framer-motion'
+import { BiChevronsDown } from 'react-icons/bi'
+
+const bounce = keyframes`
+  0%,
+  to{transform:translateY(-25%);animation-timing-function:cubic-bezier(.8,0,1,1)}
+  50%{transform:none;animation-timing-function:cubic-bezier(0,0,.2,1)}
+`
 
 export const IntroStyled = styled.div`
   position: relative;
@@ -22,4 +29,8 @@ export const ScrollBtn = styled(m.a)`
   left: calc(50% - 23px);
   bottom: 10vh;
   cursor: pointer;
+`
+
+export const Icon = styled(BiChevronsDown)`
+  animation: ${bounce} 1s infinite;
 `
