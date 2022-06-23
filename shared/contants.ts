@@ -135,6 +135,21 @@ export const skills = [
 
 export const projects = [
   {
+    id: 'cl4198jlh4fb10b0yca75wulg',
+    title: 'Color Maker',
+    description: 'Create and export beautiful color.',
+    demo: 'https://colors-maker.vercel.app/',
+    github: 'https://github.com/vohungbk/color-maker',
+    technologies: [
+      'https://cdn.jsdelivr.net/gh/PKief/vscode-material-icon-theme@main/icons/next.svg',
+      'https://cdn.jsdelivr.net/gh/PKief/vscode-material-icon-theme@main/icons/typescript.svg',
+      'https://cdn.jsdelivr.net/gh/PKief/vscode-material-icon-theme@main/icons/sass.svg',
+    ],
+    image: {
+      url: 'https://i.ibb.co/Y7Wc4Lt/Screen-Shot-2022-06-23-at-16-56-28.png',
+    },
+  },
+  {
     id: 'cl4198jlh4fb10b0yca75wulh',
     title: 'Huddle',
     description: 'A landing page with styled component',
