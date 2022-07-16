@@ -12,7 +12,6 @@ import {
 } from './styled/MainProjects.styled'
 
 const MainProjects: FC = () => {
-  console.log(projects)
   return (
     <>
       <Title>Selected projects</Title>

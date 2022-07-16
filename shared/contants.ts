@@ -135,6 +135,21 @@ export const skills = [
 
 export const projects = [
   {
+    id: 'cl4198jlh4fb10b0yca75wula',
+    title: 'Mini Spotify',
+    description: 'A music website built with Sportify API without oauth2',
+    demo: 'https://minispotify.vercel.app/',
+    github: 'https://github.com/vohungbk/mini-zing',
+    technologies: [
+      'https://cdn.jsdelivr.net/gh/PKief/vscode-material-icon-theme@main/icons/next.svg',
+      'https://cdn.jsdelivr.net/gh/PKief/vscode-material-icon-theme@main/icons/typescript.svg',
+      'https://cdn.jsdelivr.net/gh/PKief/vscode-material-icon-theme@main/icons/sass.svg',
+    ],
+    image: {
+      url: 'https://i.ibb.co/Z1TKMrL/preview1.png',
+    },
+  },
+  {
     id: 'cl4198jlh4fb10b0yca75wulg',
     title: 'Color Maker',
     description: 'Create and export beautiful color.',
