@@ -46,6 +46,7 @@ Thumbs.db
 *.flv
 *.mov
 *.wmv
+*.tsbuildinfo
 72 API error & CS-Cart Localization.xlsx
 
 .env.local
