@@ -135,6 +135,22 @@ export const skills = [
 
 export const projects = [
   {
+    id: 'cl4198jlh4fb10b0yca75wul9',
+    title: 'Coffee Order',
+    description: 'A coffee order website built with MERN',
+    demo: 'https://minispotify.vercel.app/',
+    github: 'https://github.com/vohungbk/coffee-shop',
+    technologies: [
+      'https://cdn.jsdelivr.net/gh/PKief/vscode-material-icon-theme@main/icons/next.svg',
+      'https://cdn.jsdelivr.net/gh/PKief/vscode-material-icon-theme@main/icons/typescript.svg',
+      'https://images.weserv.nl/?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2FPKief%2Fvscode-material-icon-theme%40main%2Ficons%2Ftailwindcss.svg&w=50&h=50',
+      'https://iili.io/HvZt229.png',
+    ],
+    image: {
+      url: 'https://iili.io/HvZP7IV.png',
+    },
+  },
+  {
     id: 'cl4198jlh4fb10b0yca75wula',
     title: 'Mini Spotify',
     description: 'A music website built with Sportify API without oauth2',
