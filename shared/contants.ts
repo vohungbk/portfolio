@@ -138,7 +138,7 @@ export const projects = [
     id: 'cl4198jlh4fb10b0yca75wul9',
     title: 'Coffee Order',
     description: 'A coffee order website built with MERN',
-    demo: 'https://minispotify.vercel.app/',
+    demo: 'https://coffee-milano.vercel.app/',
     github: 'https://github.com/vohungbk/coffee-shop',
     technologies: [
       'https://cdn.jsdelivr.net/gh/PKief/vscode-material-icon-theme@main/icons/next.svg',
