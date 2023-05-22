@@ -182,15 +182,17 @@ export const projects = [
   },
   {
     id: 'cl4198jlh4fb10b0yca75wulh',
-    title: 'Huddle',
-    description: 'A landing page with styled component',
-    demo: 'https://vohungbk.github.io/huddle/',
-    github: 'https://github.com/vohungbk/huddle',
+    title: 'Restaurant Booking',
+    description: 'A restaurant booking website',
+    demo: 'https://restaurant-booking-online.vercel.app/',
+    github: 'https://github.com/vohungbk/restaurant-booking',
     technologies: [
-      'https://cdn.jsdelivr.net/gh/PKief/vscode-material-icon-theme@main/icons/react.svg',
+      'https://images.weserv.nl/?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2FPKief%2Fvscode-material-icon-theme%40main%2Ficons%2Ftailwindcss.svg&w=50&h=50',
+      'https://cdn.jsdelivr.net/gh/PKief/vscode-material-icon-theme@main/icons/next.svg',
+      'https://cdn.jsdelivr.net/gh/PKief/vscode-material-icon-theme@main/icons/typescript.svg',
     ],
     image: {
-      url: 'https://i.ibb.co/h11Jth5/React-App.png',
+      url: 'https://iili.io/Hg8tMu4.png',
     },
   },
 ]
