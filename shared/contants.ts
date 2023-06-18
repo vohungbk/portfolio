@@ -151,20 +151,37 @@ export const projects = [
     },
   },
   {
-    id: 'cl4198jlh4fb10b0yca75wula',
-    title: 'Mini Spotify',
-    description: 'A music website built with Sportify API without oauth2',
-    demo: 'https://minispotify.vercel.app/',
-    github: 'https://github.com/vohungbk/mini-zing',
+    id: 'cl4198jlh4fb10b0yca75wul4',
+    title: 'ChatGPT Messenger Enhance',
+    description:
+      'A chatbot messaging platform that allows users to have conversations with an AI-powered virtual assistant, ChatGPT',
+    demo: 'https://chatgpt-messenger-enhance.vercel.app/',
+    github: 'https://github.com/vohungbk/chatpt-messenger',
     technologies: [
       'https://cdn.jsdelivr.net/gh/PKief/vscode-material-icon-theme@main/icons/next.svg',
       'https://cdn.jsdelivr.net/gh/PKief/vscode-material-icon-theme@main/icons/typescript.svg',
-      'https://cdn.jsdelivr.net/gh/PKief/vscode-material-icon-theme@main/icons/sass.svg',
+      'https://images.weserv.nl/?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2FPKief%2Fvscode-material-icon-theme%40main%2Ficons%2Ffirebase.svg&w=50&h=50',
+      'https://iili.io/H6Zxx1a.png',
     ],
     image: {
-      url: 'https://i.ibb.co/Z1TKMrL/preview1.png',
+      url: 'https://iili.io/H6Zx4TB.png',
     },
   },
+  // {
+  //   id: 'cl4198jlh4fb10b0yca75wula',
+  //   title: 'Mini Spotify',
+  //   description: 'A music website built with Sportify API without oauth2',
+  //   demo: 'https://minispotify.vercel.app/',
+  //   github: 'https://github.com/vohungbk/mini-zing',
+  //   technologies: [
+  //     'https://cdn.jsdelivr.net/gh/PKief/vscode-material-icon-theme@main/icons/next.svg',
+  //     'https://cdn.jsdelivr.net/gh/PKief/vscode-material-icon-theme@main/icons/typescript.svg',
+  //     'https://cdn.jsdelivr.net/gh/PKief/vscode-material-icon-theme@main/icons/sass.svg',
+  //   ],
+  //   image: {
+  //     url: 'https://i.ibb.co/Z1TKMrL/preview1.png',
+  //   },
+  // },
   {
     id: 'cl4198jlh4fb10b0yca75wulg',
     title: 'Color Maker',
