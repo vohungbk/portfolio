@@ -147,7 +147,7 @@ export const projects = [
       'https://iili.io/HvZt229.png',
     ],
     image: {
-      url: 'https://iili.io/HvZP7IV.png',
+      url: 'https://i.imghippo.com/files/NXFo61725585882.png',
     },
   },
   {
@@ -194,7 +194,7 @@ export const projects = [
       'https://cdn.jsdelivr.net/gh/PKief/vscode-material-icon-theme@main/icons/sass.svg',
     ],
     image: {
-      url: 'https://i.ibb.co/Y7Wc4Lt/Screen-Shot-2022-06-23-at-16-56-28.png',
+      url: 'https://i.imghippo.com/files/P8BtN1725587587.png',
     },
   },
   {
@@ -209,7 +209,7 @@ export const projects = [
       'https://cdn.jsdelivr.net/gh/PKief/vscode-material-icon-theme@main/icons/typescript.svg',
     ],
     image: {
-      url: 'https://iili.io/Hg8tMu4.png',
+      url: 'https://i.imghippo.com/files/LAo6n1725585971.png',
     },
   },
 ]
