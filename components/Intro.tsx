@@ -38,7 +38,7 @@ const Intro: FC = () => {
         animate={{ opacity: 1 }}
         transition={{ duration: 0.4, delay: 1.4 }}
       >
-        {`I'm a frontend developer`}
+        {`I'm a full-stack developer`}
       </Paragraphs>
       <ScrollBtn
         href="#who"

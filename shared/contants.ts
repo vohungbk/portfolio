@@ -147,7 +147,7 @@ export const projects = [
       'https://iili.io/HvZt229.png',
     ],
     image: {
-      url: 'https://i.imghippo.com/files/NXFo61725585882.png',
+      url: '/images/coffee-cover.png',
     },
   },
   {
@@ -164,7 +164,7 @@ export const projects = [
       'https://iili.io/H6Zxx1a.png',
     ],
     image: {
-      url: 'https://iili.io/H6Zx4TB.png',
+      url: '/images/chatgpt-messenger-cover.png',
     },
   },
   // {
@@ -194,7 +194,7 @@ export const projects = [
       'https://cdn.jsdelivr.net/gh/PKief/vscode-material-icon-theme@main/icons/sass.svg',
     ],
     image: {
-      url: 'https://i.imghippo.com/files/P8BtN1725587587.png',
+      url: '/images/color-maker-cover.png',
     },
   },
   {
@@ -209,7 +209,7 @@ export const projects = [
       'https://cdn.jsdelivr.net/gh/PKief/vscode-material-icon-theme@main/icons/typescript.svg',
     ],
     image: {
-      url: 'https://i.imghippo.com/files/LAo6n1725585971.png',
+      url: '/images/restaurant-cover.png',
     },
   },
 ]
