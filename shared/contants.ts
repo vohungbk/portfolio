@@ -152,19 +152,19 @@ export const projects = [
   },
   {
     id: 'cl4198jlh4fb10b0yca75wul4',
-    title: 'ChatGPT Messenger Enhance',
+    title: 'Eyewear E-commerce Platform with Stripe & Admin Dashboard',
     description:
-      'A chatbot messaging platform that allows users to have conversations with an AI-powered virtual assistant, ChatGPT',
-    demo: 'https://chatgpt-messenger-enhance.vercel.app/',
-    github: 'https://github.com/vohungbk/chatpt-messenger',
+      'An eyewear e-commerce platform with integrated Stripe payment and admin dashboard for managing products and orders.',
+    demo: 'https://eyewear-store-murex.vercel.app/',
+    github: 'https://github.com/vohungbk/eyewear-store',
     technologies: [
       'https://cdn.jsdelivr.net/gh/PKief/vscode-material-icon-theme@main/icons/next.svg',
       'https://cdn.jsdelivr.net/gh/PKief/vscode-material-icon-theme@main/icons/typescript.svg',
-      'https://images.weserv.nl/?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2FPKief%2Fvscode-material-icon-theme%40main%2Ficons%2Ffirebase.svg&w=50&h=50',
-      'https://iili.io/H6Zxx1a.png',
+      '/images/supabase.jpeg',
+      '/images/stripe.svg',
     ],
     image: {
-      url: '/images/chatgpt-messenger-cover.png',
+      url: '/images/eyewear-cover.png',
     },
   },
   // {
