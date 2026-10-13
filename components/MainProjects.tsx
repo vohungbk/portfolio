@@ -4,9 +4,11 @@ import { FaGithub } from 'react-icons/fa'
 import { projects } from '../shared/contants'
 import {
   CoverImageStyled,
+  HighlightsStyled,
   ImageStyled,
   ItemInfoStyled,
   MainProjectsStyled,
+  StackStyled,
   TechImageStyled,
   Title,
 } from './styled/MainProjects.styled'
@@ -35,6 +37,13 @@ const MainProjects: FC = () => {
             <p className="text-[20px] text-justify my-3">
               {project.description}
             </p>
+            {project.highlights.length > 0 && (
+              <HighlightsStyled>
+                {project.highlights.map((highlight) => (
+                  <li key={highlight}>{highlight}</li>
+                ))}
+              </HighlightsStyled>
+            )}
             <div>
               {project.technologies.map((tech) => (
                 <TechImageStyled
@@ -47,6 +56,9 @@ const MainProjects: FC = () => {
                 />
               ))}
             </div>
+            <StackStyled>
+              {project.technologies.map((tech) => tech.name).join(' · ')}
+            </StackStyled>
             <div>
               <a href={project.demo} target="_blank" rel="noopener noreferrer">
                 <BiLinkExternal size={25} />

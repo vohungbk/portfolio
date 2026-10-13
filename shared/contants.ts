@@ -158,19 +158,26 @@ const skillByTitle = (title: string) => {
 
 export const projects = [
   {
-    id: 'cl4198jlh4fb10b0yca75wul9',
-    title: 'Coffee Order',
-    description: 'A coffee order website built with MERN',
-    demo: 'https://coffee-milano.vercel.app/',
-    github: 'https://github.com/vohungbk/coffee-shop',
+    id: 'flowops',
+    title: 'FlowOps: CRM & Business Management',
+    description:
+      'A multi-user CRM for managing customers, leads and a sales pipeline, with role-based access enforced at the database level.',
+    highlights: [
+      'Role-based access (admin/employee) enforced with PostgreSQL Row Level Security',
+      'Drag-and-drop Kanban pipeline with lead-to-customer conversion',
+      'Analytics dashboard: revenue, conversion funnel and rep leaderboard',
+      'Immutable audit log, in-app notifications and data export',
+    ],
+    demo: 'https://flowops-steel.vercel.app',
+    github: 'https://github.com/vohungbk/flowops',
     technologies: [
       skillByTitle('Next.js'),
       skillByTitle('TypeScript'),
       skillByTitle('Tailwind CSS'),
-      { name: 'MERN stack', icon: 'https://iili.io/HvZt229.png' },
+      skillByTitle('Supabase'),
     ],
     image: {
-      url: '/images/coffee-cover.png',
+      url: '/images/flowops-cover.png',
     },
   },
   {
@@ -178,11 +185,18 @@ export const projects = [
     title: 'Eyewear E-commerce Platform with Stripe & Admin Dashboard',
     description:
       'An eyewear e-commerce platform with integrated Stripe payment and admin dashboard for managing products and orders.',
+    highlights: [
+      'Online checkout with Stripe payments',
+      'Admin dashboard to manage products and orders',
+      'Supabase as the database and backend services',
+      'Built on the Next.js App Router with TypeScript',
+    ],
     demo: 'https://eyewear-store-murex.vercel.app/',
     github: 'https://github.com/vohungbk/eyewear-store',
     technologies: [
       skillByTitle('Next.js'),
       skillByTitle('TypeScript'),
+      skillByTitle('Tailwind CSS'),
       skillByTitle('Supabase'),
       skillByTitle('Stripe'),
     ],
@@ -190,49 +204,58 @@ export const projects = [
       url: '/images/eyewear-cover.png',
     },
   },
+  {
+    id: 'cl4198jlh4fb10b0yca75wul9',
+    title: 'Coffee Order',
+    description: 'A coffee order website built with MERN',
+    highlights: [
+      'Coffee ordering flow with online payment',
+      'Separate Next.js client and Node.js server',
+    ],
+    demo: 'https://coffee-milano.vercel.app/',
+    github: 'https://github.com/vohungbk/coffee-shop',
+    technologies: [
+      skillByTitle('Next.js'),
+      skillByTitle('TypeScript'),
+      skillByTitle('Tailwind CSS'),
+      skillByTitle('Node.js'),
+    ],
+    image: {
+      url: '/images/coffee-cover.png',
+    },
+  },
+  // Frontend-only projects, hidden to keep the full-stack focus.
+  // Uncomment to show them again.
   // {
-  //   id: 'cl4198jlh4fb10b0yca75wula',
-  //   title: 'Mini Spotify',
-  //   description: 'A music website built with Sportify API without oauth2',
-  //   demo: 'https://minispotify.vercel.app/',
-  //   github: 'https://github.com/vohungbk/mini-zing',
+  //   id: 'cl4198jlh4fb10b0yca75wulg',
+  //   title: 'Color Maker',
+  //   description: 'Create and export beautiful color.',
+  //   highlights: [],
+  //   demo: 'https://colors-maker.vercel.app/',
+  //   github: 'https://github.com/vohungbk/color-maker',
   //   technologies: [
-  //     'https://cdn.jsdelivr.net/gh/PKief/vscode-material-icon-theme@main/icons/next.svg',
-  //     'https://cdn.jsdelivr.net/gh/PKief/vscode-material-icon-theme@main/icons/typescript.svg',
-  //     'https://cdn.jsdelivr.net/gh/PKief/vscode-material-icon-theme@main/icons/sass.svg',
+  //     skillByTitle('Next.js'),
+  //     skillByTitle('TypeScript'),
+  //     skillByTitle('Sass'),
   //   ],
   //   image: {
-  //     url: 'https://i.ibb.co/Z1TKMrL/preview1.png',
+  //     url: '/images/color-maker-cover.png',
   //   },
   // },
-  {
-    id: 'cl4198jlh4fb10b0yca75wulg',
-    title: 'Color Maker',
-    description: 'Create and export beautiful color.',
-    demo: 'https://colors-maker.vercel.app/',
-    github: 'https://github.com/vohungbk/color-maker',
-    technologies: [
-      skillByTitle('Next.js'),
-      skillByTitle('TypeScript'),
-      skillByTitle('Sass'),
-    ],
-    image: {
-      url: '/images/color-maker-cover.png',
-    },
-  },
-  {
-    id: 'cl4198jlh4fb10b0yca75wulh',
-    title: 'Restaurant Booking',
-    description: 'A restaurant booking website',
-    demo: 'https://restaurant-booking-online.vercel.app/',
-    github: 'https://github.com/vohungbk/restaurant-booking',
-    technologies: [
-      skillByTitle('Tailwind CSS'),
-      skillByTitle('Next.js'),
-      skillByTitle('TypeScript'),
-    ],
-    image: {
-      url: '/images/restaurant-cover.png',
-    },
-  },
+  // {
+  //   id: 'cl4198jlh4fb10b0yca75wulh',
+  //   title: 'Restaurant Booking',
+  //   description: 'A restaurant booking website',
+  //   highlights: [],
+  //   demo: 'https://restaurant-booking-online.vercel.app/',
+  //   github: 'https://github.com/vohungbk/restaurant-booking',
+  //   technologies: [
+  //     skillByTitle('Tailwind CSS'),
+  //     skillByTitle('Next.js'),
+  //     skillByTitle('TypeScript'),
+  //   ],
+  //   image: {
+  //     url: '/images/restaurant-cover.png',
+  //   },
+  // },
 ]

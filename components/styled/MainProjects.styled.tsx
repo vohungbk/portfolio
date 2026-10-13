@@ -111,3 +111,20 @@ export const TechImageStyled = styled.img`
   width: 30px;
   height: 30px;
 `
+
+export const HighlightsStyled = styled.ul`
+  margin: 0 0 1rem;
+  padding-left: 1.25rem;
+  list-style: disc;
+  color: rgb(209 213 219);
+  li {
+    margin-bottom: 0.25rem;
+  }
+`
+
+export const StackStyled = styled.span`
+  display: block;
+  margin-top: 0.5rem;
+  font-size: 0.95rem;
+  color: rgb(156 163 175);
+`
