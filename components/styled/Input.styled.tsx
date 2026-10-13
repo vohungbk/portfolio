@@ -8,6 +8,7 @@ export const InputStyled = styled.input`
   padding: 0.5rem 0.75rem;
   outline: 2px solid transparent;
   outline-offset: 2px;
+  resize: vertical;
   transition-property: color, background-color, border-color, fill, stroke,
     opacity, box-shadow, transform, filter, -webkit-text-decoration-color,
     -webkit-backdrop-filter;
@@ -19,6 +20,16 @@ export const InputStyled = styled.input`
     backdrop-filter, -webkit-text-decoration-color, -webkit-backdrop-filter;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 0.3s;
+  &:-webkit-autofill,
+  &:-webkit-autofill:hover,
+  &:-webkit-autofill:focus {
+    -webkit-text-fill-color: rgb(243 244 246);
+    box-shadow: 0 0 0 1000px rgb(16 16 16) inset;
+    caret-color: rgb(243 244 246);
+  }
+  &:-webkit-autofill:focus {
+    box-shadow: 0 0 0 1000px rgb(16 16 16) inset, 0 0 0 4px #027dff80;
+  }
   &:focus {
     border-color: rgb(55 65 81);
     box-shadow: 0 0 #0000, 0 0 #0000, 0 0 0 4px #027dff80;

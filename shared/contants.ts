@@ -1,3 +1,7 @@
+import type { IconType } from 'react-icons'
+import { FaGithub, FaLinkedin } from 'react-icons/fa'
+import { MdEmail } from 'react-icons/md'
+
 export const characters = [
   'M49.26 0.269989V63H41.07V34.56H9.11999V63H0.929993V0.269989H9.11999V27.81H41.07V0.269989H49.26Z',
   'M106.984 13.68V63H98.7944V55.71C97.2344 58.23 95.0444 60.21 92.2244 61.65C89.4644 63.03 86.4044 63.72 83.0444 63.72C79.2044 63.72 75.7544 62.94 72.6944 61.38C69.6344 59.76 67.2045 57.36 65.4044 54.18C63.6644 51 62.7944 47.13 62.7944 42.57V13.68H70.8944V41.49C70.8944 46.35 72.1244 50.1 74.5844 52.74C77.0445 55.32 80.4045 56.61 84.6645 56.61C89.0445 56.61 92.4944 55.26 95.0144 52.56C97.5344 49.86 98.7944 45.93 98.7944 40.77V13.68H106.984Z',
@@ -23,26 +27,31 @@ export const canvasImages = [
     `https://images.weserv.nl/?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2FPKief%2Fvscode-material-icon-theme%40main%2Ficons%2F${icon}.svg&w=50&h=50`
 )
 
-export const socialLinks = [
+export const CONTACT_EMAIL = 'vohungbk@gmail.com'
+
+export const socialLinks: {
+  title: string
+  Icon: IconType
+  link: string
+  external: boolean
+}[] = [
+  {
+    title: CONTACT_EMAIL,
+    Icon: MdEmail,
+    link: `mailto:${CONTACT_EMAIL}`,
+    external: false,
+  },
+  {
+    title: 'LinkedIn',
+    Icon: FaLinkedin,
+    link: 'https://www.linkedin.com/in/hung-vo-3134b3116/',
+    external: true,
+  },
   {
     title: 'Github',
-    icon: '/images/github.png',
+    Icon: FaGithub,
     link: 'https://github.com/vohungbk',
-  },
-  {
-    title: 'Facebook',
-    icon: '/images/facebook.png',
-    link: 'https://www.facebook.com/viethungbk/',
-  },
-  {
-    title: 'Discord',
-    icon: '/images/discord.png',
-    link: 'https://discord.com/users/8473',
-  },
-  {
-    title: 'Telegram',
-    icon: '/images/telegram.png',
-    link: 'https://web.telegram.org/k/',
+    external: true,
   },
 ]
 

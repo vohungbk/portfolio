@@ -1,7 +1,13 @@
 import { FC, Fragment } from 'react'
 import Canvas from './Canvas'
 import { SVG } from './styled/Svg.styled'
-import { Icon, IntroStyled, Paragraphs, ScrollBtn } from './styled/Intro.styled'
+import {
+  Icon,
+  IntroStyled,
+  Paragraphs,
+  ScrollBtn,
+  SubParagraphs,
+} from './styled/Intro.styled'
 import { characters } from '../shared/contants'
 import { m } from 'framer-motion'
 
@@ -38,8 +44,17 @@ const Intro: FC = () => {
         animate={{ opacity: 1 }}
         transition={{ duration: 0.4, delay: 1.4 }}
       >
-        {`I'm a full-stack developer`}
+        Full-Stack Developer
       </Paragraphs>
+      <SubParagraphs
+        data-scroll
+        data-scroll-speed="1"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 0.6 }}
+        transition={{ duration: 0.4, delay: 1.4 }}
+      >
+        Building modern web applications with Next.js, React & TypeScript.
+      </SubParagraphs>
       <ScrollBtn
         href="#who"
         data-scroll-todata-scroll

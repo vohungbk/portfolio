@@ -24,7 +24,12 @@ export const Paragraphs = styled(m.p)`
   overflow: hidden;
   z-index: 1;
 `
-export const ScrollBtn = styled(m.a)`
+export const SubParagraphs = styled(Paragraphs)`
+  font-size: 18px;
+  line-height: 26px;
+  padding: 0 16px;
+`
+export const ScrollBtn =styled(m.a)`
   position: absolute;
   left: calc(50% - 23px);
   bottom: 10vh;

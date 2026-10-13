@@ -38,6 +38,7 @@ h6 {
 }
 
 input,
+textarea,
 button {
   font-family: inherit;
   font-size: 100%;
