@@ -14,7 +14,7 @@ const Who: FC = () => {
         data-scroll
         data-scroll-speed="2"
         src="/images/avatar.png"
-        alt="Avatar"
+        alt="Portrait of Hung Vo"
       />
       <div>
         <TitleStyled data-scroll data-scroll-speed="0.5">

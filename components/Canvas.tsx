@@ -138,6 +138,7 @@ const Canvas: FC = () => {
       animate={{ opacity: 0.6 }}
       transition={{ duration: 0.4, delay: 1.4 }}
       ref={canvasRef}
+      aria-hidden="true"
     />
   )
 }

@@ -23,7 +23,10 @@ const MainProjects: FC = () => {
           <CoverImageStyled data-scroll data-scroll-speed="3">
             <div>
               <div className="border-black border-[8px]">
-                <ImageStyled src={project.image.url} alt="Cover image" />
+                <ImageStyled
+                  src={project.image.url}
+                  alt={`${project.title} cover`}
+                />
               </div>
             </div>
           </CoverImageStyled>
@@ -35,9 +38,10 @@ const MainProjects: FC = () => {
             <div>
               {project.technologies.map((tech) => (
                 <TechImageStyled
-                  key={tech}
-                  src={tech}
-                  alt="Tech"
+                  key={tech.name}
+                  src={tech.icon}
+                  alt={tech.name}
+                  title={tech.name}
                   width={30}
                   height={30}
                 />

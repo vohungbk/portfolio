@@ -148,6 +148,14 @@ export const canvasImages = skillGroups.flatMap((group) =>
   group.skills.map((skill) => skill.image)
 )
 
+const skillByTitle = (title: string) => {
+  const skill = skillGroups
+    .flatMap((group) => group.skills)
+    .find((item) => item.title === title)
+  if (!skill) throw new Error(`Unknown skill: ${title}`)
+  return { name: skill.title, icon: skill.image }
+}
+
 export const projects = [
   {
     id: 'cl4198jlh4fb10b0yca75wul9',
@@ -156,10 +164,10 @@ export const projects = [
     demo: 'https://coffee-milano.vercel.app/',
     github: 'https://github.com/vohungbk/coffee-shop',
     technologies: [
-      'https://cdn.jsdelivr.net/gh/PKief/vscode-material-icon-theme@main/icons/next.svg',
-      'https://cdn.jsdelivr.net/gh/PKief/vscode-material-icon-theme@main/icons/typescript.svg',
-      materialIcon('tailwindcss'),
-      'https://iili.io/HvZt229.png',
+      skillByTitle('Next.js'),
+      skillByTitle('TypeScript'),
+      skillByTitle('Tailwind CSS'),
+      { name: 'MERN stack', icon: 'https://iili.io/HvZt229.png' },
     ],
     image: {
       url: '/images/coffee-cover.png',
@@ -173,10 +181,10 @@ export const projects = [
     demo: 'https://eyewear-store-murex.vercel.app/',
     github: 'https://github.com/vohungbk/eyewear-store',
     technologies: [
-      'https://cdn.jsdelivr.net/gh/PKief/vscode-material-icon-theme@main/icons/next.svg',
-      'https://cdn.jsdelivr.net/gh/PKief/vscode-material-icon-theme@main/icons/typescript.svg',
-      '/images/supabase.jpeg',
-      '/images/stripe.svg',
+      skillByTitle('Next.js'),
+      skillByTitle('TypeScript'),
+      skillByTitle('Supabase'),
+      skillByTitle('Stripe'),
     ],
     image: {
       url: '/images/eyewear-cover.png',
@@ -204,9 +212,9 @@ export const projects = [
     demo: 'https://colors-maker.vercel.app/',
     github: 'https://github.com/vohungbk/color-maker',
     technologies: [
-      'https://cdn.jsdelivr.net/gh/PKief/vscode-material-icon-theme@main/icons/next.svg',
-      'https://cdn.jsdelivr.net/gh/PKief/vscode-material-icon-theme@main/icons/typescript.svg',
-      'https://cdn.jsdelivr.net/gh/PKief/vscode-material-icon-theme@main/icons/sass.svg',
+      skillByTitle('Next.js'),
+      skillByTitle('TypeScript'),
+      skillByTitle('Sass'),
     ],
     image: {
       url: '/images/color-maker-cover.png',
@@ -219,9 +227,9 @@ export const projects = [
     demo: 'https://restaurant-booking-online.vercel.app/',
     github: 'https://github.com/vohungbk/restaurant-booking',
     technologies: [
-      materialIcon('tailwindcss'),
-      'https://cdn.jsdelivr.net/gh/PKief/vscode-material-icon-theme@main/icons/next.svg',
-      'https://cdn.jsdelivr.net/gh/PKief/vscode-material-icon-theme@main/icons/typescript.svg',
+      skillByTitle('Tailwind CSS'),
+      skillByTitle('Next.js'),
+      skillByTitle('TypeScript'),
     ],
     image: {
       url: '/images/restaurant-cover.png',

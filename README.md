@@ -1,6 +1,6 @@
-# HungVo's Portfolio
+# Hung Vo's Portfolio
 
-My personal portfolio
+Personal portfolio of Hung Vo, a Full-Stack Developer based in Da Nang, Vietnam. It focuses on SaaS and web applications built end to end with Next.js and NestJS.
 
 <p align="center">
   <img alt="Stars" src="https://badgen.net/github/stars/vohungbk/portfolio">
@@ -11,22 +11,62 @@ My personal portfolio
 
 ## Live demo
 
-Official Website: [https://hungvo.vercel.app/](https://hungvo.vercel.app/)
+[https://hungvo.vercel.app/](https://hungvo.vercel.app/)
 
-## Main technology used
+## Tech stack
 
-- nextjs, typescript
-- styledcomponent
+- Next.js 12 (Pages Router), React 18, TypeScript
+- styled-components
 - framer-motion (animation)
-- react-locomotive-scroll (parallax scroll)
-- graphql ([GraphCMS](https://graphcms.com/))
+- locomotive-scroll via react-locomotive-scroll (smooth scroll and parallax)
+- react-icons
 
-## Installation
+The site is fully static. There is no backend or CMS. The contact form opens the visitor's email client with a `mailto:` link.
 
-- Clone the project
-- Run `npm install`
-- Run `npm run dev`
+## Getting started
 
-## Summary
+Requirements: Node.js 16 or later and npm.
 
-👉 If you like this project, give it a star ✨ and share 👨🏻‍💻 it to your friends 👈
+```bash
+npm install
+npm run dev
+```
+
+Open [http://localhost:3000](http://localhost:3000).
+
+Other scripts:
+
+```bash
+npm run build   # production build
+npm run start   # serve the production build
+```
+
+## Environment variables
+
+| Name                | Description                                |
+| ------------------- | ------------------------------------------ |
+| `NEXT_PUBLIC_GA_ID` | Google Analytics measurement ID (optional) |
+
+Create a `.env.local` file to set it.
+
+## Project structure
+
+- `pages/` — `index.tsx` is the single page. `_app.tsx` holds global meta tags and analytics. `_document.tsx` sets the page language.
+- `components/` — one component per section: Intro, Who, Skills, MainProjects, Contact. Styles live in `components/styled/`.
+- `shared/contants.ts` — all site content: skills, projects, social links and the hero name path.
+- `public/images/` — project covers and local icons.
+
+## Updating content
+
+Edit `shared/contants.ts`:
+
+- **Skills:** add an item to a group in `skillGroups`. The hero animation reuses the same icons.
+- **Projects:** add an item to `projects`. Reference technologies by skill title with `skillByTitle('Next.js')`.
+- **Contact:** change `CONTACT_EMAIL` and `socialLinks`.
+
+Page title, description and social preview image are set in `pages/_app.tsx`.
+
+## Notes
+
+- `reactStrictMode` is disabled in `next.config.js`.
+- `package.json` pins `@types/react` with `overrides`. Without it, `@types/styled-components` pulls in a second React type version and the build fails.

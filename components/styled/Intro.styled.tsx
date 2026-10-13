@@ -29,7 +29,7 @@ export const SubParagraphs = styled(Paragraphs)`
   line-height: 26px;
   padding: 0 16px;
 `
-export const ScrollBtn =styled(m.a)`
+export const ScrollBtn = styled(m.a)`
   position: absolute;
   left: calc(50% - 23px);
   bottom: 10vh;
