@@ -9,6 +9,10 @@ import Script from 'next/script'
 import * as gtag from '../lib/gtag'
 import { useRouter } from 'next/router'
 
+const TITLE = 'Hung Vo | Full-Stack Developer (Next.js, NestJS, SaaS)'
+const DESCRIPTION =
+  'Hung Vo is a Full-Stack Developer based in Da Nang, Vietnam. I build SaaS products end to end, from Next.js interfaces to NestJS APIs and payments.'
+
 function MyApp({ Component, pageProps }: AppProps) {
   const router = useRouter()
   useEffect(() => {
@@ -26,18 +30,18 @@ function MyApp({ Component, pageProps }: AppProps) {
   return (
     <>
       <Head>
-        <title>{`HungVo's Portfolio`}</title>
-        <meta name="title" content="HungVo's Portfolio" />
-        <meta name="description" content="HungVo's Portfolio" />
+        <title>{TITLE}</title>
+        <meta name="title" content={TITLE} />
+        <meta name="description" content={DESCRIPTION} />
 
         <meta property="og:type" content="website" />
-        <meta property="og:title" content="HungVo's Portfolio" />
-        <meta property="og:description" content="HungVo's Portfolio" />
+        <meta property="og:title" content={TITLE} />
+        <meta property="og:description" content={DESCRIPTION} />
         <meta property="og:image" content="/images/avatar.png" />
 
         <meta property="twitter:card" content="summary_large_image" />
-        <meta property="twitter:title" content="HungVo's Portfolio" />
-        <meta property="twitter:description" content="HungVo's Portfolio" />
+        <meta property="twitter:title" content={TITLE} />
+        <meta property="twitter:description" content={DESCRIPTION} />
         <meta property="twitter:image" content="/images/avatar.png" />
       </Head>
       <LazyMotion features={domAnimation}>

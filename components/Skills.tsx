@@ -1,7 +1,9 @@
 import React from 'react'
-import { skills } from '../shared/contants'
+import { skillGroups } from '../shared/contants'
 import {
   DescriptionStyled,
+  GroupStyled,
+  GroupTitleStyled,
   ImageStyled,
   LinkStyled,
   ListStyled,
@@ -25,22 +27,27 @@ const Skills = () => {
         data-scroll-direction="horizontal"
         data-scroll-speed="1"
       >
-        Technologies and languages that I use to make my product everyday
+        Technologies I use to design, build and ship full-stack products
       </DescriptionStyled>
 
-      <ListStyled>
-        {skills.map((skill) => (
-          <LinkStyled
-            key={skill.link}
-            href={skill.link}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <ImageStyled src={skill.image} alt="Image skill"></ImageStyled>
-            <TitleSkillStyled>{skill.title}</TitleSkillStyled>
-          </LinkStyled>
-        ))}
-      </ListStyled>
+      {skillGroups.map((group) => (
+        <GroupStyled key={group.title}>
+          <GroupTitleStyled>{group.title}</GroupTitleStyled>
+          <ListStyled>
+            {group.skills.map((skill) => (
+              <LinkStyled
+                key={skill.link}
+                href={skill.link}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <ImageStyled src={skill.image} alt={skill.title}></ImageStyled>
+                <TitleSkillStyled>{skill.title}</TitleSkillStyled>
+              </LinkStyled>
+            ))}
+          </ListStyled>
+        </GroupStyled>
+      ))}
     </SkillStyled>
   )
 }

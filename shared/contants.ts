@@ -9,24 +9,6 @@ export const characters = [
   'M198.721 12.87C202.981 12.87 206.701 13.8 209.881 15.66C213.121 17.52 215.521 19.86 217.081 22.68V13.68H225.361V64.08C225.361 68.58 224.401 72.57 222.481 76.05C220.561 79.59 217.801 82.35 214.201 84.33C210.661 86.31 206.521 87.3 201.781 87.3C195.301 87.3 189.901 85.77 185.581 82.71C181.261 79.65 178.711 75.48 177.931 70.2H186.031C186.931 73.2 188.791 75.6 191.611 77.4C194.431 79.26 197.821 80.19 201.781 80.19C206.281 80.19 209.941 78.78 212.761 75.96C215.641 73.14 217.081 69.18 217.081 64.08V53.73C215.461 56.61 213.061 59.01 209.881 60.93C206.701 62.85 202.981 63.81 198.721 63.81C194.341 63.81 190.351 62.73 186.751 60.57C183.211 58.41 180.421 55.38 178.381 51.48C176.341 47.58 175.321 43.14 175.321 38.16C175.321 33.12 176.341 28.71 178.381 24.93C180.421 21.09 183.211 18.12 186.751 16.02C190.351 13.92 194.341 12.87 198.721 12.87ZM217.081 38.25C217.081 34.53 216.331 31.29 214.831 28.53C213.331 25.77 211.291 23.67 208.711 22.23C206.191 20.73 203.401 19.98 200.341 19.98C197.281 19.98 194.491 20.7 191.971 22.14C189.451 23.58 187.441 25.68 185.941 28.44C184.441 31.2 183.691 34.44 183.691 38.16C183.691 41.94 184.441 45.24 185.941 48.06C187.441 50.82 189.451 52.95 191.971 54.45C194.491 55.89 197.281 56.61 200.341 56.61C203.401 56.61 206.191 55.89 208.711 54.45C211.291 52.95 213.331 50.82 214.831 48.06C216.331 45.24 217.081 41.97 217.081 38.25Z',
 ]
 
-export const canvasImages = [
-  'html',
-  'javascript',
-  'css',
-  'react',
-  'typescript',
-  'angular',
-  'tailwindcss',
-  'sass',
-  'next',
-  'firebase',
-  'git',
-  'webpack',
-].map(
-  (icon) =>
-    `https://images.weserv.nl/?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2FPKief%2Fvscode-material-icon-theme%40main%2Ficons%2F${icon}.svg&w=50&h=50`
-)
-
 export const CONTACT_EMAIL = 'vohungbk@gmail.com'
 
 export const socialLinks: {
@@ -55,92 +37,116 @@ export const socialLinks: {
   },
 ]
 
-export const skills = [
+const materialIcon = (name: string) =>
+  `https://images.weserv.nl/?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2FPKief%2Fvscode-material-icon-theme%40main%2Ficons%2F${name}.svg&w=50&h=50`
+
+export const skillGroups = [
   {
-    id: 1,
-    image:
-      'https://images.weserv.nl/?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2FPKief%2Fvscode-material-icon-theme%40main%2Ficons%2Fhtml.svg&w=50&h=50',
-    link: 'https://www.w3schools.com/html/default.asp',
-    title: 'html',
+    title: 'Frontend',
+    skills: [
+      {
+        title: 'HTML',
+        image: materialIcon('html'),
+        link: 'https://developer.mozilla.org/en-US/docs/Web/HTML',
+      },
+      {
+        title: 'CSS',
+        image: materialIcon('css'),
+        link: 'https://developer.mozilla.org/en-US/docs/Web/CSS',
+      },
+      {
+        title: 'JavaScript',
+        image: materialIcon('javascript'),
+        link: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript',
+      },
+      {
+        title: 'TypeScript',
+        image: materialIcon('typescript'),
+        link: 'https://www.typescriptlang.org/',
+      },
+      {
+        title: 'React',
+        image: materialIcon('react'),
+        link: 'https://reactjs.org/',
+      },
+      {
+        title: 'Next.js',
+        image: materialIcon('next'),
+        link: 'https://nextjs.org/',
+      },
+      {
+        title: 'Tailwind CSS',
+        image: materialIcon('tailwindcss'),
+        link: 'https://tailwindcss.com/',
+      },
+      {
+        title: 'Sass',
+        image: materialIcon('sass'),
+        link: 'https://sass-lang.com/',
+      },
+      {
+        title: 'Angular',
+        image: materialIcon('angular'),
+        link: 'https://angular.io/',
+      },
+      {
+        title: 'Webpack',
+        image: materialIcon('webpack'),
+        link: 'https://webpack.js.org/',
+      },
+    ],
   },
   {
-    id: 2,
-    image:
-      'https://images.weserv.nl/?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2FPKief%2Fvscode-material-icon-theme%40main%2Ficons%2Fjavascript.svg&w=50&h=50',
-    link: 'https://www.w3schools.com/js/default.asp',
-    title: 'javascript',
-  },
-  {
-    id: 3,
-    image:
-      'https://images.weserv.nl/?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2FPKief%2Fvscode-material-icon-theme%40main%2Ficons%2Fcss.svg&w=50&h=50',
-    link: 'https://www.w3schools.com/css/default.asp',
-    title: 'html',
-  },
-  {
-    id: 4,
-    image:
-      'https://images.weserv.nl/?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2FPKief%2Fvscode-material-icon-theme%40main%2Ficons%2Freact.svg&w=50&h=50',
-    link: 'https://reactjs.org/',
-    title: 'react',
-  },
-  {
-    id: 5,
-    image:
-      'https://images.weserv.nl/?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2FPKief%2Fvscode-material-icon-theme%40main%2Ficons%2Ftypescript.svg&w=50&h=50',
-    link: 'https://www.typescriptlang.org/',
-    title: 'typescript',
-  },
-  {
-    id: 6,
-    image:
-      'https://images.weserv.nl/?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2FPKief%2Fvscode-material-icon-theme%40main%2Ficons%2Fangular.svg&w=50&h=50',
-    link: 'https://angular.io/',
-    title: 'angular',
-  },
-  {
-    id: 7,
-    image:
-      'https://images.weserv.nl/?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2FPKief%2Fvscode-material-icon-theme%40main%2Ficons%2Ftailwindcss.svg&w=50&h=50',
-    link: 'https://tailwindcss.com/',
-    title: 'tailwindcss',
-  },
-  {
-    id: 8,
-    image:
-      'https://images.weserv.nl/?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2FPKief%2Fvscode-material-icon-theme%40main%2Ficons%2Fsass.svg&w=50&h=50',
-    link: 'https://sass-lang.com/',
-    title: 'sass',
-  },
-  {
-    id: 9,
-    image:
-      'https://images.weserv.nl/?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2FPKief%2Fvscode-material-icon-theme%40main%2Ficons%2Fnext.svg&w=50&h=50',
-    link: 'https://nextjs.org/',
-    title: 'next',
-  },
-  {
-    id: 10,
-    image:
-      'https://images.weserv.nl/?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2FPKief%2Fvscode-material-icon-theme%40main%2Ficons%2Ffirebase.svg&w=50&h=50',
-    link: 'https://firebase.google.com/',
-    title: 'firebase',
-  },
-  {
-    id: 11,
-    image:
-      'https://images.weserv.nl/?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2FPKief%2Fvscode-material-icon-theme%40main%2Ficons%2Fgit.svg&w=50&h=50',
-    link: 'https://git-scm.com/',
-    title: 'git',
-  },
-  {
-    id: 12,
-    image:
-      'https://images.weserv.nl/?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2FPKief%2Fvscode-material-icon-theme%40main%2Ficons%2Fwebpack.svg&w=50&h=50',
-    link: 'https://webpack.js.org/',
-    title: 'webpack',
+    title: 'Backend',
+    skills: [
+      {
+        title: 'Node.js',
+        image: materialIcon('nodejs'),
+        link: 'https://nodejs.org/',
+      },
+      {
+        title: 'NestJS',
+        image: materialIcon('nest'),
+        link: 'https://nestjs.com/',
+      },
+      {
+        title: 'PHP',
+        image: materialIcon('php'),
+        link: 'https://www.php.net/',
+      },
+      {
+        title: 'Laravel',
+        image: materialIcon('laravel'),
+        link: 'https://laravel.com/',
+      },
+      {
+        title: 'Supabase',
+        image: materialIcon('supabase'),
+        link: 'https://supabase.com/',
+      },
+      {
+        title: 'Firebase',
+        image: materialIcon('firebase'),
+        link: 'https://firebase.google.com/',
+      },
+      {
+        title: 'Stripe',
+        image: '/images/stripe.svg',
+        link: 'https://stripe.com/docs',
+      },
+      {
+        title: 'Git',
+        image: materialIcon('git'),
+        link: 'https://git-scm.com/',
+      },
+    ],
   },
 ]
+
+// Hero canvas particles reuse the skill icons so both lists stay in sync
+export const canvasImages = skillGroups.flatMap((group) =>
+  group.skills.map((skill) => skill.image)
+)
 
 export const projects = [
   {
@@ -152,7 +158,7 @@ export const projects = [
     technologies: [
       'https://cdn.jsdelivr.net/gh/PKief/vscode-material-icon-theme@main/icons/next.svg',
       'https://cdn.jsdelivr.net/gh/PKief/vscode-material-icon-theme@main/icons/typescript.svg',
-      'https://images.weserv.nl/?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2FPKief%2Fvscode-material-icon-theme%40main%2Ficons%2Ftailwindcss.svg&w=50&h=50',
+      materialIcon('tailwindcss'),
       'https://iili.io/HvZt229.png',
     ],
     image: {
@@ -213,7 +219,7 @@ export const projects = [
     demo: 'https://restaurant-booking-online.vercel.app/',
     github: 'https://github.com/vohungbk/restaurant-booking',
     technologies: [
-      'https://images.weserv.nl/?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2FPKief%2Fvscode-material-icon-theme%40main%2Ficons%2Ftailwindcss.svg&w=50&h=50',
+      materialIcon('tailwindcss'),
       'https://cdn.jsdelivr.net/gh/PKief/vscode-material-icon-theme@main/icons/next.svg',
       'https://cdn.jsdelivr.net/gh/PKief/vscode-material-icon-theme@main/icons/typescript.svg',
     ],

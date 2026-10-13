@@ -53,7 +53,8 @@ const Intro: FC = () => {
         animate={{ opacity: 0.6 }}
         transition={{ duration: 0.4, delay: 1.4 }}
       >
-        Building modern web applications with Next.js, React & TypeScript.
+        I build SaaS products end to end, from Next.js interfaces to NestJS APIs
+        and payments.
       </SubParagraphs>
       <ScrollBtn
         href="#who"

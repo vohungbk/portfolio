@@ -21,17 +21,17 @@ const Who: FC = () => {
           Who am I?
         </TitleStyled>
         <InfoStyled id="story">
-          Hi, I'm Hung Vo 👋
+          Hi, I&apos;m Hung Vo 👋
           <br />
-          I'm a Full-Stack Developer based in Da Nang, Vietnam, with 7+ years of
-          experience building web applications. I work primarily with React,
-          Next.js, and TypeScript on the frontend, and NestJS, Node.js, and
-          PHP/Laravel on the backend. I enjoy building complete web solutions,
-          from crafting responsive user interfaces to developing APIs and
-          integrating databases. My goal is to write clean, maintainable code
-          and turn complex requirements into reliable, user-friendly products.
-          When I'm not coding, you'll probably find me listening to music or
-          playing video games.
+          I&apos;m a Full-Stack Developer based in Da Nang, Vietnam, with 7+
+          years of experience building web applications. I work primarily with
+          React, Next.js, and TypeScript on the frontend, and NestJS, Node.js,
+          and PHP/Laravel on the backend. I enjoy building complete web
+          solutions, from crafting responsive user interfaces to developing APIs
+          and integrating databases. My goal is to write clean, maintainable
+          code and turn complex requirements into reliable, user-friendly
+          products. When I&apos;m not coding, you&apos;ll probably find me
+          listening to music or playing video games.
         </InfoStyled>
       </div>
     </WhoStyled>

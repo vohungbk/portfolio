@@ -29,18 +29,37 @@ export const DescriptionStyled = styled.p`
   margin-bottom: 30px;
 `
 
+export const GroupStyled = styled.div`
+  width: 100%;
+  max-width: 900px;
+  margin-bottom: 30px;
+`
+
+export const GroupTitleStyled = styled.h2`
+  text-align: center;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  margin-bottom: 20px;
+  font-weight: 600;
+  color: rgb(243 244 246);
+`
+
 export const ListStyled = styled.div`
-  display: grid;
+  display: flex;
+  flex-wrap: wrap;
   justify-content: center;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
   row-gap: 10px;
   @media (min-width: 768px) {
-    grid-template-columns: repeat(6, minmax(0, 1fr));
     row-gap: 20px;
   }
 `
 
 export const LinkStyled = styled.a`
+  flex: 0 0 25%;
+  min-width: 0;
+  @media (min-width: 768px) {
+    flex-basis: calc(100% / 6);
+  }
   display: flex;
   align-items: center;
   justify-content: space-around;
