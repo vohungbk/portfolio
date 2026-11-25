@@ -1,130 +1,191 @@
 import styled from 'styled-components'
 
-interface StyleProps {
-  layout?: string
-}
+const focusRing = `
+  &:focus-visible {
+    outline: 3px solid #8ab4f8;
+    outline-offset: 2px;
+  }
+`
 
-export const Title = styled.h1`
+export const MainProjectsStyled = styled.section`
+  width: 100%;
+  padding: 0 5vw;
+  box-sizing: border-box;
+`
+
+export const Title = styled.h2`
   text-align: center;
   margin-bottom: 2.5rem;
   font-size: 2.25rem;
   line-height: 2.5rem;
   @media (min-width: 768px) {
-    margin-bottom: 5rem;
+    margin-bottom: 4rem;
   }
 `
-export const MainProjectsStyled = styled.div<StyleProps>`
-  display: flex;
-  gap: 20px;
-  flex-direction: column;
 
-  width: 100%;
-  padding-left: 5vw;
-  padding-right: 5vw;
-  margin-bottom: 5rem;
+interface ProjectProps {
+  $reversed: boolean
+  $largeMedia?: boolean
+}
+
+export const ProjectStyled = styled.article<ProjectProps>`
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 1.5rem;
+  max-width: 1280px;
+  margin: 0 auto 3rem;
+  padding: 1.25rem;
+  box-sizing: border-box;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  background-color: rgba(255, 255, 255, 0.02);
+
   @media (min-width: 768px) {
-    min-height: 60vh;
-    margin-top: 2.5rem;
-    margin-bottom: 2.5rem;
+    padding: 2rem;
+    margin-bottom: 4rem;
   }
   @media (min-width: 1024px) {
-    gap: 50px;
-    flex-direction: ${({ layout }) => layout || 'row'};
-  }
-`
-
-export const CoverImageStyled = styled.div`
-  @media (min-width: 1024px) {
-    flex: 1;
-  }
-  > div {
-    overflow: hidden;
-    border-color: rgb(136 136 136);
-    border-width: 2px;
-    border-radius: 20px;
-    > div {
-      border-color: rgb(0 0 0);
-      border-width: 8px;
+    grid-template-columns: ${({ $reversed, $largeMedia }) => {
+      const media = `minmax(0, ${$largeMedia ? 1.4 : 1.1}fr)`
+      return $reversed ? `${media} minmax(0, 1fr)` : `minmax(0, 1fr) ${media}`
+    }};
+    gap: 3rem;
+    align-items: center;
+    > :first-child {
+      order: ${({ $reversed }) => ($reversed ? 2 : 1)};
+    }
+    > :last-child {
+      order: ${({ $reversed }) => ($reversed ? 1 : 2)};
     }
   }
 `
 
-export const ImageStyled = styled.img`
-  border-radius: 12px;
-  width: 100%;
-`
+export const InfoStyled = styled.div`
+  min-width: 0;
 
-export const ItemInfoStyled = styled.div`
-  @media (min-width: 1024px) {
-    flex: 1;
-  }
-  h1 {
+  h3 {
     font-size: 1.875rem;
     line-height: 2.25rem;
-  }
-  p {
-    font-size: 20px;
-    text-align: justify;
-    margin-top: 0.75rem;
-    margin-bottom: 0.75rem;
-  }
-  div:first-of-type {
-    display: flex;
-    gap: 5px;
-  }
-  div:last-child {
-    display: flex;
-    gap: 20px;
-    margin-top: 25px;
-    a {
-      transition-duration: 0.3s;
-      transition-property: color, background-color, border-color,
-        text-decoration-color, fill, stroke, opacity, box-shadow, transform,
-        filter, backdrop-filter, -webkit-text-decoration-color,
-        -webkit-backdrop-filter;
-      transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-
-      color: rgb(255 255 255);
-      height: 45px;
-      padding-left: 15px;
-      padding-right: 15px;
-      display: flex;
-      align-items: center;
-      border-radius: 0.25rem;
-      &:first-child {
-        background-color: #1876d2;
-        &:hover {
-          background-color: #2884e0;
-        }
-      }
-      &:last-child {
-        background-color: #1b222b;
-        &:hover {
-          background-color: #191e25;
-        }
-      }
-    }
+    font-weight: 700;
   }
 `
 
-export const TechImageStyled = styled.img`
-  width: 30px;
-  height: 30px;
+export const TaglineStyled = styled.p`
+  margin-top: 0.4rem;
+  font-size: 1.125rem;
+  color: rgb(209 213 219);
 `
 
-export const HighlightsStyled = styled.ul`
-  margin: 0 0 1rem;
+export const DescriptionStyled = styled.p`
+  margin: 1rem 0 1.25rem;
+  font-size: 1rem;
+  line-height: 1.7;
+  color: rgb(209 213 219);
+`
+
+export const FeaturesStyled = styled.ul`
+  margin: 0 0 1.25rem;
   padding-left: 1.25rem;
   list-style: disc;
   color: rgb(209 213 219);
+  line-height: 1.6;
   li {
-    margin-bottom: 0.25rem;
+    margin-bottom: 0.4rem;
   }
 `
 
-export const StackStyled = styled.span`
-  display: block;
-  margin-top: 0.5rem;
-  font-size: 0.95rem;
-  color: rgb(156 163 175);
+export const TechListStyled = styled.ul`
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+`
+
+export const TechItemStyled = styled.li`
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.3rem 0.7rem;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 999px;
+  background-color: rgba(255, 255, 255, 0.05);
+  font-size: 0.875rem;
+  color: rgb(229 231 235);
+  img {
+    width: 20px;
+    height: 20px;
+  }
+`
+
+export const ActionsStyled = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 1.25rem;
+
+  a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    min-height: 48px;
+    padding: 0 1.1rem;
+    border-radius: 0.375rem;
+    color: rgb(255 255 255);
+    text-decoration: none;
+    transition:
+      background-color 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+      transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    ${focusRing}
+
+    &:first-child {
+      background-color: #1876d2;
+      &:hover {
+        background-color: #2884e0;
+      }
+    }
+    &:not(:first-child) {
+      background-color: #1b222b;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      &:hover {
+        background-color: #262e39;
+      }
+    }
+    @media (prefers-reduced-motion: no-preference) {
+      &:hover {
+        transform: translateY(-1px);
+      }
+    }
+  }
+  @media (max-width: 479px) {
+    a {
+      flex: 1 1 100%;
+    }
+  }
+`
+
+export const MediaStyled = styled.figure<{ $largeMedia?: boolean }>`
+  min-width: 0;
+  margin: 0;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 14px;
+  background-color: rgb(24 24 27);
+
+  img {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: ${({ $largeMedia }) => ($largeMedia ? 'auto' : '2 / 1')};
+    object-fit: cover;
+    object-position: top left;
+    transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  @media (prefers-reduced-motion: no-preference) {
+    &:hover img {
+      transform: scale(1.03);
+    }
+  }
 `

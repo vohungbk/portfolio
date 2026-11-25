@@ -1,5 +1,7 @@
+import type { Project } from './types'
 import type { IconType } from 'react-icons'
 import { FaGithub, FaLinkedin } from 'react-icons/fa'
+import { SiPostgresql, SiShadcnui, SiZod } from 'react-icons/si'
 import { MdEmail } from 'react-icons/md'
 
 export const characters = [
@@ -156,20 +158,61 @@ const skillByTitle = (title: string) => {
   return { name: skill.title, icon: skill.image }
 }
 
-export const projects = [
+export const projects: Project[] = [
+  {
+    id: 'airport-operations-saas',
+    name: 'Airport Operations SaaS',
+    tagline: 'Multi-Tenant Rental Management Platform',
+    description:
+      'A multi-tenant airport child-seat rental management platform designed to help rental partners manage bookings, inventory, operations, and settlements across multiple airports.',
+    features: [
+      'Multi-tenant architecture with PostgreSQL Row Level Security (RLS)',
+      'Role-based access control for Admin, Operations Manager, Partner User, and Technician',
+      'Booking management by airport, pickup/return dates, seat class, and daily pricing',
+      'Inventory, cleaning, inspection, technician jobs, and incident management',
+      'Partner settlements, invoices, and payment status tracking',
+    ],
+    demo: 'https://airport-operations-saas.vercel.app/',
+    github: 'https://github.com/vohungbk/airport-operations-saas',
+    largeMedia: true,
+    demoAccess: {
+      email: 'admin@airportops.example',
+      password: 'DemoPassw0rd!',
+    },
+    technologies: [
+      skillByTitle('Next.js'),
+      skillByTitle('TypeScript'),
+      skillByTitle('Tailwind CSS'),
+      skillByTitle('Supabase'),
+      { name: 'PostgreSQL', Icon: SiPostgresql, color: '#4169E1' },
+      { name: 'shadcn/ui', Icon: SiShadcnui, color: '#FFFFFF' },
+      { name: 'Zod', Icon: SiZod, color: '#3E67B1' },
+    ],
+    image: {
+      url: '/images/airport-operations-cover.png',
+      alt: 'Airport Operations SaaS Workflow Board showing bookings grouped by workflow step, with partner, airport and priority filters',
+      width: 2560,
+      height: 1197,
+    },
+  },
   {
     id: 'flowops',
-    title: 'FlowOps: CRM & Business Management',
+    name: 'FlowOps',
+    tagline: 'CRM & Business Management Platform',
     description:
-      'A multi-user CRM for managing customers, leads and a sales pipeline, with role-based access enforced at the database level.',
-    highlights: [
-      'Role-based access (admin/employee) enforced with PostgreSQL Row Level Security',
-      'Drag-and-drop Kanban pipeline with lead-to-customer conversion',
-      'Analytics dashboard: revenue, conversion funnel and rep leaderboard',
-      'Immutable audit log, in-app notifications and data export',
+      'A multi-user CRM and business management platform for managing customers, leads, and sales pipelines with role-based access and database-level security.',
+    features: [
+      'Role-based access control enforced with PostgreSQL Row Level Security',
+      'Customer and lead management with a drag-and-drop sales pipeline',
+      'Analytics dashboard with revenue, conversion funnel, and KPIs',
+      'Immutable audit logs for important actions and data exports',
     ],
-    demo: 'https://flowops-steel.vercel.app',
+    demo: 'https://flowops-steel.vercel.app/',
     github: 'https://github.com/vohungbk/flowops',
+    demoAccess: {
+      email: 'sarah.rep@demo.app',
+      password: 'demo@2026',
+    },
     technologies: [
       skillByTitle('Next.js'),
       skillByTitle('TypeScript'),
@@ -178,18 +221,23 @@ export const projects = [
     ],
     image: {
       url: '/images/flowops-cover.png',
+      alt: 'FlowOps dashboard showing customer and lead totals, win rate, a 12-month revenue chart and pipeline value by stage',
+      width: 2557,
+      height: 1212,
     },
   },
   {
-    id: 'cl4198jlh4fb10b0yca75wul4',
-    title: 'Eyewear E-commerce Platform with Stripe & Admin Dashboard',
+    id: 'eyewear-store',
+    name: 'Eyewear Store',
+    tagline: 'Modern E-commerce Platform',
     description:
-      'An eyewear e-commerce platform with integrated Stripe payment and admin dashboard for managing products and orders.',
-    highlights: [
-      'Online checkout with Stripe payments',
-      'Admin dashboard to manage products and orders',
-      'Supabase as the database and backend services',
-      'Built on the Next.js App Router with TypeScript',
+      'A modern eyewear e-commerce platform designed to deliver a smooth online shopping experience with integrated payment processing and store management capabilities.',
+    features: [
+      'Product catalog and product browsing',
+      'Shopping cart and checkout experience',
+      'Stripe payment integration',
+      'Admin dashboard for store management',
+      'Facebook Pixel and Conversions API integration',
     ],
     demo: 'https://eyewear-store-murex.vercel.app/',
     github: 'https://github.com/vohungbk/eyewear-store',
@@ -201,29 +249,39 @@ export const projects = [
       skillByTitle('Stripe'),
     ],
     image: {
-      url: '/images/eyewear-cover.png',
+      url: '/images/eyewear-store-cover.png',
+      alt: 'VÉLORA eyewear store home page with promotional banners for everyday eyewear and sunglasses',
+      width: 2554,
+      height: 1198,
     },
   },
-  {
-    id: 'cl4198jlh4fb10b0yca75wul9',
-    title: 'Coffee Order',
-    description: 'A coffee order website built with MERN',
-    highlights: [
-      'Coffee ordering flow with online payment',
-      'Separate Next.js client and Node.js server',
-    ],
-    demo: 'https://coffee-milano.vercel.app/',
-    github: 'https://github.com/vohungbk/coffee-shop',
-    technologies: [
-      skillByTitle('Next.js'),
-      skillByTitle('TypeScript'),
-      skillByTitle('Tailwind CSS'),
-      skillByTitle('Node.js'),
-    ],
-    image: {
-      url: '/images/coffee-cover.png',
-    },
-  },
+  // Coffee Order is hidden: its live demo (coffee-milano.vercel.app) is
+  // disabled on Vercel (HTTP 402). Restore it once the demo is back online.
+  // {
+  //   id: 'coffee-order',
+  //   name: 'Coffee Order',
+  //   tagline: 'Coffee Ordering Website',
+  //   description: 'A coffee order website built with MERN',
+  //   features: [
+  //     'Coffee ordering flow with online payment',
+  //     'Separate Next.js client and Node.js server',
+  //   ],
+  //   demo: 'https://coffee-milano.vercel.app/',
+  //   github: 'https://github.com/vohungbk/coffee-shop',
+  //   technologies: [
+  //     skillByTitle('Next.js'),
+  //     skillByTitle('TypeScript'),
+  //     skillByTitle('Tailwind CSS'),
+  //     skillByTitle('Node.js'),
+  //   ],
+  //   image: {
+  //     url: '/images/coffee-cover.png',
+  //     alt: 'Coffee Order website home page',
+  //     width: 2870,
+  //     height: 1300,
+  //   },
+  // },
+
   // Frontend-only projects, hidden to keep the full-stack focus.
   // Uncomment to show them again.
   // {

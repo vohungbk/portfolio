@@ -1,82 +1,97 @@
-import { BiLinkExternal } from 'react-icons/bi'
+import Image from 'next/image'
 import { FC } from 'react'
+import { BiLinkExternal } from 'react-icons/bi'
 import { FaGithub } from 'react-icons/fa'
 import { projects } from '../shared/contants'
+import DemoAccess from './DemoAccess'
 import {
-  CoverImageStyled,
-  HighlightsStyled,
-  ImageStyled,
-  ItemInfoStyled,
+  ActionsStyled,
+  DescriptionStyled,
+  FeaturesStyled,
+  InfoStyled,
   MainProjectsStyled,
-  StackStyled,
-  TechImageStyled,
+  MediaStyled,
+  ProjectStyled,
+  TaglineStyled,
+  TechItemStyled,
+  TechListStyled,
   Title,
 } from './styled/MainProjects.styled'
 
 const MainProjects: FC = () => {
   return (
-    <>
-      <Title>Selected projects</Title>
+    <MainProjectsStyled id="projects" aria-labelledby="projects-heading">
+      <Title id="projects-heading">Selected projects</Title>
       {projects.map((project, index) => (
-        <MainProjectsStyled
+        <ProjectStyled
           key={project.id}
-          layout={index % 2 === 1 ? 'row' : 'row-reverse'}
+          $reversed={index % 2 === 1}
+          $largeMedia={project.largeMedia}
+          aria-labelledby={`project-${project.id}`}
         >
-          <CoverImageStyled data-scroll data-scroll-speed="3">
-            <div>
-              <div className="border-black border-[8px]">
-                <ImageStyled
-                  src={project.image.url}
-                  alt={`${project.title} cover`}
-                />
-              </div>
-            </div>
-          </CoverImageStyled>
-          <ItemInfoStyled>
-            <h1>{project.title}</h1>
-            <p className="text-[20px] text-justify my-3">
-              {project.description}
-            </p>
-            {project.highlights.length > 0 && (
-              <HighlightsStyled>
-                {project.highlights.map((highlight) => (
-                  <li key={highlight}>{highlight}</li>
-                ))}
-              </HighlightsStyled>
-            )}
-            <div>
-              {project.technologies.map((tech) => (
-                <TechImageStyled
-                  key={tech.name}
-                  src={tech.icon}
-                  alt={tech.name}
-                  title={tech.name}
-                  width={30}
-                  height={30}
-                />
+          <InfoStyled>
+            <h3 id={`project-${project.id}`}>{project.name}</h3>
+            <TaglineStyled>{project.tagline}</TaglineStyled>
+            <DescriptionStyled>{project.description}</DescriptionStyled>
+            <FeaturesStyled aria-label={`${project.name} key features`}>
+              {project.features.map((feature) => (
+                <li key={feature}>{feature}</li>
               ))}
-            </div>
-            <StackStyled>
-              {project.technologies.map((tech) => tech.name).join(' · ')}
-            </StackStyled>
-            <div>
-              <a href={project.demo} target="_blank" rel="noopener noreferrer">
-                <BiLinkExternal size={25} />
-                <span> Live Demo</span>
-              </a>
+            </FeaturesStyled>
+            <TechListStyled aria-label={`${project.name} technology stack`}>
+              {project.technologies.map((tech) => (
+                <TechItemStyled key={tech.name}>
+                  {tech.icon && (
+                    // eslint-disable-next-line @next/next/no-img-element
+                    <img src={tech.icon} alt="" width={20} height={20} />
+                  )}
+                  {tech.Icon && (
+                    <tech.Icon
+                      size={20}
+                      color={tech.color}
+                      aria-hidden="true"
+                    />
+                  )}
+                  {tech.name}
+                </TechItemStyled>
+              ))}
+            </TechListStyled>
+            {project.demoAccess && <DemoAccess access={project.demoAccess} />}
+            <ActionsStyled>
               <a
-                href={project.github}
+                href={project.demo}
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label={`Live demo of ${project.name} (opens in a new tab)`}
               >
-                <FaGithub size={25} />
-                <span> View Github</span>
+                <BiLinkExternal size={22} aria-hidden="true" />
+                <span>Live Demo</span>
               </a>
-            </div>
-          </ItemInfoStyled>
-        </MainProjectsStyled>
+              {project.github && (
+                <a
+                  href={project.github}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={`${project.name} source code on GitHub (opens in a new tab)`}
+                >
+                  <FaGithub size={22} aria-hidden="true" />
+                  <span>View GitHub</span>
+                </a>
+              )}
+            </ActionsStyled>
+          </InfoStyled>
+          <MediaStyled $largeMedia={project.largeMedia}>
+            <Image
+              src={project.image.url}
+              alt={project.image.alt}
+              width={project.image.width}
+              height={project.image.height}
+              sizes="(min-width: 1024px) 48vw, 90vw"
+            />
+          </MediaStyled>
+        </ProjectStyled>
       ))}
-    </>
+    </MainProjectsStyled>
   )
 }
 
