@@ -11,6 +11,9 @@
     "test": "jest --watch"
   },
   "pre-commit": "lint:staged",
+  "engines": {
+    "node": "20.x"
+  },
   "dependencies": {
     "framer-motion": "^6.3.11",
     "locomotive-scroll": "^4.1.4",
