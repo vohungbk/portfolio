@@ -2,9 +2,7 @@
 node_modules/
 dist/
 .next
-yarn.lock
 jsconfig.json
-package-lock.json
 out
 # Compiled Java class files
 *.class
