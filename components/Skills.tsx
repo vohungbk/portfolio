@@ -1,53 +1,45 @@
 import React from 'react'
-import { skillGroups } from '../shared/contants'
+import { skillAreas } from '../shared/contants'
 import {
+  AreaStyled,
   DescriptionStyled,
-  GroupStyled,
-  GroupTitleStyled,
-  ImageStyled,
-  LinkStyled,
-  ListStyled,
+  GridStyled,
   SkillStyled,
-  TitleSkillStyled,
   TitleStyled,
 } from './styled/Skills.styled'
 
 const Skills = () => {
   return (
-    <SkillStyled>
+    <SkillStyled aria-labelledby="skills-heading">
       <TitleStyled
+        id="skills-heading"
         data-scroll
         data-scroll-direction="horizontal"
         data-scroll-speed="-1"
       >
-        {`My skills & Knowledge`}
+        {`My Skills & Knowledge`}
       </TitleStyled>
       <DescriptionStyled
         data-scroll
         data-scroll-direction="horizontal"
         data-scroll-speed="1"
       >
-        Technologies I use to design, build and ship full-stack products
+        Areas of expertise and engineering capabilities.
       </DescriptionStyled>
 
-      {skillGroups.map((group) => (
-        <GroupStyled key={group.title}>
-          <GroupTitleStyled>{group.title}</GroupTitleStyled>
-          <ListStyled>
-            {group.skills.map((skill) => (
-              <LinkStyled
-                key={skill.link}
-                href={skill.link}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <ImageStyled src={skill.image} alt={skill.title}></ImageStyled>
-                <TitleSkillStyled>{skill.title}</TitleSkillStyled>
-              </LinkStyled>
-            ))}
-          </ListStyled>
-        </GroupStyled>
-      ))}
+      <GridStyled>
+        {skillAreas.map((area) => (
+          <AreaStyled key={area.id} aria-labelledby={`skills-${area.id}`}>
+            <h3 id={`skills-${area.id}`}>{area.title}</h3>
+            <p>{area.description}</p>
+            <ul>
+              {area.skills.map((skill) => (
+                <li key={skill}>{skill}</li>
+              ))}
+            </ul>
+          </AreaStyled>
+        ))}
+      </GridStyled>
     </SkillStyled>
   )
 }

@@ -1,21 +1,46 @@
-import { FC, Fragment } from 'react'
+import { FC, Fragment, MouseEvent } from 'react'
+import { useLocomotiveScroll } from 'react-locomotive-scroll'
 import Canvas from './Canvas'
 import { SVG } from './styled/Svg.styled'
 import {
+  CtaGroup,
+  CtaLink,
+  Description,
   Icon,
   IntroStyled,
-  Paragraphs,
   ScrollBtn,
-  SubParagraphs,
+  Tagline,
+  Title,
+  VisuallyHidden,
 } from './styled/Intro.styled'
 import { characters } from '../shared/contants'
 import { m } from 'framer-motion'
 
+const fadeIn = (delay: number) => ({
+  initial: { opacity: 0 },
+  animate: { opacity: 1 },
+  transition: { duration: 0.4, delay },
+})
+
 const Intro: FC = () => {
+  const { scroll } = useLocomotiveScroll()
+
+  // Locomotive smooth scroll needs its own scrollTo; fall back to the native anchor
+  const goTo = (target: string) => (event: MouseEvent<HTMLAnchorElement>) => {
+    if (!scroll) return
+    event.preventDefault()
+    scroll.scrollTo(target)
+  }
+
   return (
     <IntroStyled>
       <Canvas />
-      <SVG viewBox="0 0 245 97" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <SVG
+        aria-hidden="true"
+        viewBox="0 0 245 97"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
         {characters.map((character, index) => (
           <Fragment key={character}>
             <m.path
@@ -37,35 +62,33 @@ const Intro: FC = () => {
           </Fragment>
         ))}
       </SVG>
-      <Paragraphs
-        data-scroll
-        data-scroll-speed="1"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 0.4, delay: 1.4 }}
-      >
+      <Title {...fadeIn(1.4)}>
+        <VisuallyHidden>Hung, </VisuallyHidden>
         Full-Stack Developer
-      </Paragraphs>
-      <SubParagraphs
-        data-scroll
-        data-scroll-speed="1"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 0.6 }}
-        transition={{ duration: 0.4, delay: 1.4 }}
-      >
-        I build SaaS products end to end, from Next.js interfaces to NestJS APIs
-        and payments.
-      </SubParagraphs>
+      </Title>
+      <Tagline {...fadeIn(1.5)}>
+        I build SaaS products end to end, from modern web interfaces to backend
+        APIs and payment integrations.
+      </Tagline>
+      <Description {...fadeIn(1.6)}>
+        7+ years of experience building scalable web applications, SaaS
+        platforms, and business solutions with modern technologies.
+      </Description>
+      <CtaGroup {...fadeIn(1.7)}>
+        <CtaLink $primary href="#projects" onClick={goTo('#projects')}>
+          View My Projects
+        </CtaLink>
+        <CtaLink href="#contact" onClick={goTo('#contact')}>
+          Contact Me
+        </CtaLink>
+      </CtaGroup>
       <ScrollBtn
         href="#who"
-        data-scroll-todata-scroll
-        data-scroll-speed="2"
-        data-scroll-delay="1"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 0.4, delay: 1.4 }}
+        onClick={goTo('#who')}
+        aria-label="Scroll to About"
+        {...fadeIn(1.8)}
       >
-        <Icon size={56} />
+        <Icon size={56} aria-hidden="true" />
       </ScrollBtn>
     </IntroStyled>
   )

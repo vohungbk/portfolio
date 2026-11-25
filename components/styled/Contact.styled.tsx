@@ -4,7 +4,7 @@ export const ContactStyled = styled.div`
   padding-bottom: 5rem;
 `
 
-export const TitleStyled = styled.h1`
+export const TitleStyled = styled.h2`
   text-align: center;
   margin-bottom: 2.5rem;
   font-size: 2.25rem;
@@ -61,7 +61,7 @@ export const BtnSendStyled = styled.button`
   background-image: none;
 `
 
-export const TitleSocialStyled = styled.h1`
+export const TitleSocialStyled = styled.h3`
   font-size: 1.25rem;
   line-height: 1.75rem;
   margin-bottom: 0.75rem;

@@ -28,7 +28,7 @@ const Contact: FC = () => {
 
   return (
     <ContactStyled id="contact">
-      <TitleStyled> Get in touch</TitleStyled>
+      <TitleStyled>Get in touch</TitleStyled>
       <ContentStyled data-scroll data-scroll-speed="1">
         <InfoStyled>
           <div>
@@ -76,8 +76,8 @@ const Contact: FC = () => {
                   ? { target: '_blank', rel: 'noopener noreferrer' }
                   : {})}
               >
-                <Icon size={30} />
-                <h1>{title}</h1>
+                <Icon size={30} aria-hidden="true" />
+                <span>{title}</span>
               </SocialLinksStyled>
             ))}
           </div>

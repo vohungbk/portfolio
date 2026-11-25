@@ -143,7 +143,7 @@ export const ActionsStyled = styled.div`
     &:first-child {
       background-color: #1876d2;
       &:hover {
-        background-color: #2884e0;
+        background-color: #1565c0;
       }
     }
     &:not(:first-child) {

@@ -22,13 +22,13 @@ const Home: NextPage = () => {
       watch={[]}
       containerRef={containerRef}
     >
-      <div data-scroll-container ref={containerRef}>
+      <main data-scroll-container ref={containerRef}>
         <Intro />
         <Who />
         <Skills />
         <MainProjects />
         <Contact />
-      </div>
+      </main>
     </LocomotiveScrollProvider>
   )
 }

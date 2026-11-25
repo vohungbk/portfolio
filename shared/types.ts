@@ -61,3 +61,25 @@ export interface Project {
     height: number
   }
 }
+
+export interface StackTechnology {
+  name: string
+  Icon: IconType
+  /** Brand color; light colors are used where the brand color is too dark for the dark theme */
+  color: string
+  /** Core technology, highlighted in the Technology Stack section */
+  core?: boolean
+}
+
+export interface StackCategory {
+  id: string
+  title: string
+  technologies: StackTechnology[]
+}
+
+export interface SkillArea {
+  id: string
+  title: string
+  description: string
+  skills: string[]
+}

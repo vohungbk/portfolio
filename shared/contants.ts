@@ -1,8 +1,36 @@
-import type { Project } from './types'
+import type {
+  Project,
+  SkillArea,
+  StackCategory,
+  StackTechnology,
+} from './types'
 import type { IconType } from 'react-icons'
 import { FaGithub, FaLinkedin } from 'react-icons/fa'
-import { SiPostgresql, SiShadcnui, SiZod } from 'react-icons/si'
-import { MdEmail } from 'react-icons/md'
+import {
+  SiClaude,
+  SiCss,
+  SiFacebook,
+  SiFirebase,
+  SiGit,
+  SiGithub,
+  SiJavascript,
+  SiHtml5,
+  SiLaravel,
+  SiMeta,
+  SiNestjs,
+  SiNextdotjs,
+  SiNodedotjs,
+  SiPhp,
+  SiPostgresql,
+  SiReact,
+  SiShadcnui,
+  SiStripe,
+  SiSupabase,
+  SiTailwindcss,
+  SiTypescript,
+  SiZod,
+} from 'react-icons/si'
+import { MdApi, MdEmail, MdIntegrationInstructions } from 'react-icons/md'
 
 export const characters = [
   'M49.26 0.269989V63H41.07V34.56H9.11999V63H0.929993V0.269989H9.11999V27.81H41.07V0.269989H49.26Z',
@@ -36,6 +64,214 @@ export const socialLinks: {
     Icon: FaGithub,
     link: 'https://github.com/vohungbk',
     external: true,
+  },
+]
+
+// Technology Stack. Only technologies with evidence in this portfolio, its projects,
+// or the profile copy are listed. Redux, Docker, VS Code and Webhooks are left out.
+const tech = {
+  react: {
+    name: 'React',
+    Icon: SiReact,
+    color: '#61DAFB',
+    core: true,
+  },
+  next: {
+    name: 'Next.js',
+    Icon: SiNextdotjs,
+    color: '#FFFFFF',
+    core: true,
+  },
+  typescript: {
+    name: 'TypeScript',
+    Icon: SiTypescript,
+    color: '#3178C6',
+    core: true,
+  },
+  javascript: {
+    name: 'JavaScript',
+    Icon: SiJavascript,
+    color: '#F7DF1E',
+  },
+  html: {
+    name: 'HTML5',
+    Icon: SiHtml5,
+    color: '#E34F26',
+  },
+  css: {
+    name: 'CSS3',
+    Icon: SiCss,
+    color: '#663399',
+  },
+  tailwind: {
+    name: 'Tailwind CSS',
+    Icon: SiTailwindcss,
+    color: '#06B6D4',
+  },
+  shadcn: {
+    name: 'shadcn/ui',
+    Icon: SiShadcnui,
+    color: '#FFFFFF',
+  },
+  node: {
+    name: 'Node.js',
+    Icon: SiNodedotjs,
+    color: '#5FA04E',
+    core: true,
+  },
+  nest: {
+    name: 'NestJS',
+    Icon: SiNestjs,
+    color: '#E0234E',
+    core: true,
+  },
+  rest: { name: 'REST APIs', Icon: MdApi, color: '#9CA3AF' },
+  php: {
+    name: 'PHP',
+    Icon: SiPhp,
+    color: '#777BB4',
+  },
+  laravel: {
+    name: 'Laravel',
+    Icon: SiLaravel,
+    color: '#FF2D20',
+  },
+  postgres: {
+    name: 'PostgreSQL',
+    Icon: SiPostgresql,
+    color: '#4169E1',
+    core: true,
+  },
+  supabase: {
+    name: 'Supabase',
+    Icon: SiSupabase,
+    color: '#3ECF8E',
+    core: true,
+  },
+  firebase: {
+    name: 'Firebase',
+    Icon: SiFirebase,
+    color: '#FFCA28',
+  },
+  stripe: {
+    name: 'Stripe',
+    Icon: SiStripe,
+    color: '#635BFF',
+  },
+  thirdParty: {
+    name: 'Third-party APIs',
+    Icon: MdIntegrationInstructions,
+    color: '#9CA3AF',
+  },
+  pixel: { name: 'Facebook Pixel', Icon: SiFacebook, color: '#1877F2' },
+  conversions: { name: 'Conversions API', Icon: SiMeta, color: '#0081FB' },
+  git: {
+    name: 'Git',
+    Icon: SiGit,
+    color: '#F05032',
+  },
+  github: {
+    name: 'GitHub',
+    Icon: SiGithub,
+    color: '#FFFFFF',
+  },
+  claude: { name: 'Claude Code', Icon: SiClaude, color: '#D97757' },
+} satisfies Record<string, StackTechnology>
+
+export const techStack: StackCategory[] = [
+  {
+    id: 'frontend',
+    title: 'Frontend Development',
+    technologies: [
+      tech.react,
+      tech.next,
+      tech.typescript,
+      tech.javascript,
+      tech.html,
+      tech.css,
+      tech.tailwind,
+      tech.shadcn,
+    ],
+  },
+  {
+    id: 'backend',
+    title: 'Backend Development',
+    technologies: [tech.node, tech.nest, tech.rest, tech.php, tech.laravel],
+  },
+  {
+    id: 'data',
+    title: 'Database & Backend Services',
+    technologies: [tech.postgres, tech.supabase, tech.firebase],
+  },
+  {
+    id: 'integrations',
+    title: 'Payments & Integrations',
+    technologies: [tech.stripe, tech.thirdParty, tech.pixel, tech.conversions],
+  },
+  {
+    id: 'tools',
+    title: 'Tools & Development',
+    technologies: [tech.git, tech.github, tech.claude],
+  },
+]
+
+// Skills & Knowledge: engineering capabilities. Each one maps to features built in
+// the projects above (multi-tenant RLS, RBAC, dashboards, cart and checkout, Stripe).
+export const skillAreas: SkillArea[] = [
+  {
+    id: 'frontend',
+    title: 'Frontend Engineering',
+    description: 'Building responsive, maintainable user interfaces.',
+    skills: [
+      'Responsive UI Development',
+      'Component Architecture',
+      'State Management',
+      'Frontend Performance Optimization',
+    ],
+  },
+  {
+    id: 'backend',
+    title: 'Backend Engineering',
+    description: 'Designing APIs, business logic, and data models.',
+    skills: [
+      'REST API Development',
+      'Authentication & Authorization',
+      'Business Logic Implementation',
+      'Database Design',
+    ],
+  },
+  {
+    id: 'saas',
+    title: 'SaaS & Multi-tenant Architecture',
+    description: 'Secure multi-user platforms with isolated data.',
+    skills: [
+      'Multi-tenant Application Architecture',
+      'Role-Based Access Control (RBAC)',
+      'Admin Dashboards',
+      'Data Isolation & Access Control',
+    ],
+  },
+  {
+    id: 'ecommerce',
+    title: 'E-commerce Development',
+    description: 'Online stores from product catalog to payment.',
+    skills: [
+      'Product Management',
+      'Shopping Cart & Checkout',
+      'Payment Integration',
+      'Stripe Integration',
+    ],
+  },
+  {
+    id: 'practices',
+    title: 'Engineering Practices',
+    description: 'Keeping code reliable and easy to change.',
+    skills: [
+      'Clean Code & Maintainability',
+      'Scalable Application Architecture',
+      'Git Workflow',
+      'Debugging & Performance Optimization',
+    ],
   },
 ]
 

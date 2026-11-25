@@ -43,7 +43,14 @@ const MainProjects: FC = () => {
                 <TechItemStyled key={tech.name}>
                   {tech.icon && (
                     // eslint-disable-next-line @next/next/no-img-element
-                    <img src={tech.icon} alt="" width={20} height={20} />
+                    <img
+                      src={tech.icon}
+                      alt=""
+                      width={20}
+                      height={20}
+                      loading="lazy"
+                      decoding="async"
+                    />
                   )}
                   {tech.Icon && (
                     <tech.Icon
@@ -62,7 +69,7 @@ const MainProjects: FC = () => {
                 href={project.demo}
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label={`Live demo of ${project.name} (opens in a new tab)`}
+                aria-label={`Live Demo: ${project.name} (opens in a new tab)`}
               >
                 <BiLinkExternal size={22} aria-hidden="true" />
                 <span>Live Demo</span>
@@ -72,7 +79,7 @@ const MainProjects: FC = () => {
                   href={project.github}
                   target="_blank"
                   rel="noopener noreferrer"
-                  aria-label={`${project.name} source code on GitHub (opens in a new tab)`}
+                  aria-label={`View GitHub: ${project.name} source code (opens in a new tab)`}
                 >
                   <FaGithub size={22} aria-hidden="true" />
                   <span>View GitHub</span>
